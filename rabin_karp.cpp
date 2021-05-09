@@ -5,10 +5,7 @@ using namespace std;
 void rabinKarp(string text,string pattern,int q){
   int m = text.length();
   int n = pattern.length();
-  int h = 1;
-  for(int i = 0;i < n-1;i++){
-    h = (h*d)%q;
-  }
+  int h = (int)pow(d,n-1)%q;
   int p = 0;
   int j;
   int t = 0;
